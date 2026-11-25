@@ -1,0 +1,21 @@
+{"frames": {
+
+"face_0":
+{
+	"frame": {"x":2,"y":2,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-face-howard-cornelius.png",
+	"format": "RGBA5555",
+	"size": {"w":204,"h":204},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d1ba7064f0c51920107ab77b867d9a8a:9764eb0e5e26d6767fed508751214a31:56db809a7e1aa31e3b8b36d61c91a214$"
+}
+}

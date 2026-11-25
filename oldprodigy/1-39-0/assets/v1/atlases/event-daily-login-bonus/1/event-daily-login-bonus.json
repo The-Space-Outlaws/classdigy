@@ -1,0 +1,39 @@
+{"frames": {
+
+"mystery_present":
+{
+	"frame": {"x":643,"y":2,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":80,"h":80},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"title_banner_left":
+{
+	"frame": {"x":487,"y":2,"w":154,"h":127},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":23,"w":154,"h":127},
+	"sourceSize": {"w":156,"h":164},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"title_banner_right":
+{
+	"frame": {"x":2,"y":2,"w":483,"h":149},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":7,"w":483,"h":149},
+	"sourceSize": {"w":486,"h":164},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "event-daily-login-bonus.png",
+	"format": "RGBA5555",
+	"size": {"w":715,"h":153},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:fa6ea893248e2f8436c468139c7960e0:8d1ddfb05d80e0dd1c2fc3b03a3cf916:5f157e01ec6d73d45a2e8d7e3934f72b$"
+}
+}

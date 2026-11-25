@@ -241,11 +241,40 @@ FirebaseCore.describeError = function (err) {
 	}
 };
 
+FirebaseCore.getSaveVersion = function () {
+	try {
+		var game = FirebaseCore.getGame();
+		var v = game && game.prodigy && game.prodigy.version;
+		if (v) return String(v);
+	} catch (e) {}
+	return "1-30-0";
+};
+
+FirebaseCore.saveDoc = function (uid, version) {
+	version = version || FirebaseCore.getSaveVersion();
+	return firebase.firestore().collection("saves").doc(uid).collection("versions").doc(String(version));
+};
+
+FirebaseCore.legacySaveDoc = function (uid) {
+	return firebase.firestore().collection("saves").doc(uid);
+};
+
 FirebaseCore.readCloudSave = function () {
-	return firebase.firestore().collection("saves").doc(FirebaseCore.user.uid).get().then(function (doc) {
+	var uid = FirebaseCore.user.uid;
+	var version = FirebaseCore.getSaveVersion();
+	return FirebaseCore.saveDoc(uid, version).get().then(function (doc) {
 		var d = doc.exists ? doc.data() : null;
-		return d && d.appearancedata && d.data ? d : null
-	})
+		if (d && d.appearancedata && d.data) return d;
+		// Backward compat: older clients stored one save at saves/{uid}.
+		// Only adopt it when it belongs to this game version (or has no version).
+		return FirebaseCore.legacySaveDoc(uid).get().then(function (legacyDoc) {
+			var ld = legacyDoc.exists ? legacyDoc.data() : null;
+			if (!ld || !ld.appearancedata || !ld.data) return null;
+			var legacyVersion = ld.gameVersion ? String(ld.gameVersion) : null;
+			if (legacyVersion && legacyVersion !== String(version)) return null;
+			return ld;
+		});
+	});
 };
 
 FirebaseCore.applySaveSafely = function (state, save) {
@@ -345,7 +374,16 @@ FirebaseCore.deleteAccount = function (password, done) {
 			handle = doc.exists && doc.data().usernameLower || null;
 		}, function () {});
 	}).then(function () {
-		return firebase.firestore().collection("saves").doc(user.uid).delete()
+		// Delete versioned saves (saves/{uid}/versions/*) and legacy saves/{uid}.
+		var db = firebase.firestore();
+		return db.collection("saves").doc(user.uid).collection("versions").get().then(function (snap) {
+			var deletes = [];
+			if (snap && !snap.empty) snap.forEach(function (doc) { deletes.push(doc.ref.delete().catch(function () {})); });
+			deletes.push(db.collection("saves").doc(user.uid).delete().catch(function () {}));
+			return Promise.all(deletes);
+		}, function () {
+			return db.collection("saves").doc(user.uid).delete().catch(function () {});
+		});
 	}).then(function () {
 		return firebase.firestore().collection("players").doc(user.uid).delete()
 	}).then(function () {
@@ -575,9 +613,9 @@ FirebaseCore.pushSave = function (done) {
 		var cleanSave = FirebaseCore.toFirestoreData(save);
 		var saveSig = FirebaseCore._sigOf(cleanSave, ["savedAt", "updatedAt"]);
 		if (saveSig !== FirebaseCore._lastSaveSig) {
-			firebase.firestore().collection("saves").doc(FirebaseCore.user.uid).set(cleanSave).then(function () {
+			FirebaseCore.saveDoc(FirebaseCore.user.uid).set(cleanSave).then(function () {
 				FirebaseCore._lastSaveSig = saveSig;
-				console.log("Cloud save pushed: " + (save.appearancedata && save.appearancedata.name));
+				console.log("Cloud save pushed: " + (save.appearancedata && save.appearancedata.name) + " [" + FirebaseCore.getSaveVersion() + "]");
 				done(null);
 			}, function (e) {
 				FirebaseCore._lastSaveSig = null;

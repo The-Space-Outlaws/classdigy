@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_m":
+{
+	"frame": {"x":90,"y":30,"w":22,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":30},
+	"sourceSize": {"w":22,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_m":
+{
+	"frame": {"x":90,"y":62,"w":22,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":30},
+	"sourceSize": {"w":22,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_0":
+{
+	"frame": {"x":2,"y":42,"w":42,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_1":
+{
+	"frame": {"x":46,"y":42,"w":42,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_2":
+{
+	"frame": {"x":61,"y":2,"w":41,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_3":
+{
+	"frame": {"x":45,"y":70,"w":40,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_4":
+{
+	"frame": {"x":2,"y":70,"w":41,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_m":
+{
+	"frame": {"x":2,"y":2,"w":57,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":38},
+	"sourceSize": {"w":57,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-male-38.png",
+	"format": "RGBA8888",
+	"size": {"w":114,"h":98},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4f36fe9f0d110c9aee2f591cb5c32e9d:24344c2c9e288e7fa8ff3cfcab4145dc:28b75a3c594940b981bed02773eb92bb$"
+}
+}

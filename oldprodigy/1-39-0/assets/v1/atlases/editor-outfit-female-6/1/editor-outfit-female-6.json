@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_f":
+{
+	"frame": {"x":86,"y":2,"w":16,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":28},
+	"sourceSize": {"w":16,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_f":
+{
+	"frame": {"x":104,"y":2,"w":16,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":28},
+	"sourceSize": {"w":16,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_0":
+{
+	"frame": {"x":2,"y":2,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_1":
+{
+	"frame": {"x":187,"y":2,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_2":
+{
+	"frame": {"x":148,"y":2,"w":37,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":24},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_3":
+{
+	"frame": {"x":33,"y":2,"w":25,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":25,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_4":
+{
+	"frame": {"x":60,"y":2,"w":24,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":24,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_f":
+{
+	"frame": {"x":122,"y":2,"w":24,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":26},
+	"sourceSize": {"w":24,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-female-6.png",
+	"format": "RGBA8888",
+	"size": {"w":227,"h":32},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:10177b4ac3c12d6bdcb9246ed98d2a74:33399466a7385d56c8506f36690eeeed:81ace732d622567aeba78acdbafa0de6$"
+}
+}

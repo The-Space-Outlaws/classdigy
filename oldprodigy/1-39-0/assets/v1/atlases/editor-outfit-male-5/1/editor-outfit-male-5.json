@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_m":
+{
+	"frame": {"x":72,"y":30,"w":18,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":28},
+	"sourceSize": {"w":18,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_m":
+{
+	"frame": {"x":46,"y":42,"w":24,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":28},
+	"sourceSize": {"w":24,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_0":
+{
+	"frame": {"x":2,"y":42,"w":42,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_1":
+{
+	"frame": {"x":2,"y":70,"w":42,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":23},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_2":
+{
+	"frame": {"x":58,"y":2,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_3":
+{
+	"frame": {"x":74,"y":60,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_4":
+{
+	"frame": {"x":46,"y":72,"w":26,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":26,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_m":
+{
+	"frame": {"x":2,"y":2,"w":54,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":38},
+	"sourceSize": {"w":54,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-male-5.png",
+	"format": "RGBA8888",
+	"size": {"w":98,"h":100},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:aa7993e00c2f7a715fe93304fd4cf6fc:51a7cf4c9346007f073acfe3f059f651:9528516780a365b7edb26472c3165ad0$"
+}
+}

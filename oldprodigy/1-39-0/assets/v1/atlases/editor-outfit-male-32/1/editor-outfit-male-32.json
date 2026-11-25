@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_m":
+{
+	"frame": {"x":103,"y":30,"w":18,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":26},
+	"sourceSize": {"w":18,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_m":
+{
+	"frame": {"x":123,"y":27,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_0":
+{
+	"frame": {"x":42,"y":2,"w":42,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_1":
+{
+	"frame": {"x":110,"y":2,"w":42,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":23},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_2":
+{
+	"frame": {"x":42,"y":30,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_3":
+{
+	"frame": {"x":86,"y":2,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_4":
+{
+	"frame": {"x":75,"y":30,"w":26,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":26,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_m":
+{
+	"frame": {"x":2,"y":2,"w":38,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":37},
+	"sourceSize": {"w":38,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-male-32.png",
+	"format": "RGBA8888",
+	"size": {"w":154,"h":58},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:93778d4e6b0da570135551044f233cfb:7cf860c5a32ef1f57d9653f6eb776196:2bec7256708dad4767fc0515e92e65e6$"
+}
+}

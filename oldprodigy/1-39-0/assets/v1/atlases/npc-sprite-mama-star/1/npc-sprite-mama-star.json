@@ -1,0 +1,111 @@
+{"frames": {
+
+"arms_0":
+{
+	"frame": {"x":71,"y":28,"w":52,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":12},
+	"sourceSize": {"w":52,"h":12},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"dress_0":
+{
+	"frame": {"x":71,"y":42,"w":25,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":21},
+	"sourceSize": {"w":25,"h":21},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"eyebrows_0":
+{
+	"frame": {"x":36,"y":59,"w":22,"h":4},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":4},
+	"sourceSize": {"w":22,"h":4},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"eyes_0":
+{
+	"frame": {"x":98,"y":58,"w":15,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":7},
+	"sourceSize": {"w":15,"h":7},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"eyes_1":
+{
+	"frame": {"x":2,"y":59,"w":15,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":7},
+	"sourceSize": {"w":15,"h":7},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"eyes_2":
+{
+	"frame": {"x":19,"y":59,"w":15,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":7},
+	"sourceSize": {"w":15,"h":7},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"feet_0":
+{
+	"frame": {"x":98,"y":42,"w":24,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":6},
+	"sourceSize": {"w":24,"h":6},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"feet_1":
+{
+	"frame": {"x":98,"y":50,"w":24,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":6},
+	"sourceSize": {"w":24,"h":6},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"head_0":
+{
+	"frame": {"x":2,"y":2,"w":67,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":67,"h":55},
+	"sourceSize": {"w":67,"h":55},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"mouth_0":
+{
+	"frame": {"x":113,"y":2,"w":9,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":9,"h":5},
+	"sourceSize": {"w":9,"h":5},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"shawl_0":
+{
+	"frame": {"x":71,"y":2,"w":40,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":24},
+	"sourceSize": {"w":40,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-sprite-mama-star.png",
+	"format": "RGBA5555",
+	"size": {"w":125,"h":68},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5fc731f60f73b4894e8fa51015af21bb:b940d6e7d66bc10d8de654f383bd2608:7c2efaed7a39bcda87ba2ab433e8197e$"
+}
+}

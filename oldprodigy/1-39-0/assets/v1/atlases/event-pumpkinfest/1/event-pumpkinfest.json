@@ -1,0 +1,93 @@
+{"frames": {
+
+"event-shop":
+{
+	"frame": {"x":2,"y":2,"w":212,"h":214},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":212,"h":214},
+	"sourceSize": {"w":212,"h":214},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"event-sign":
+{
+	"frame": {"x":216,"y":43,"w":64,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":96},
+	"sourceSize": {"w":64,"h":96},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"flame-1":
+{
+	"frame": {"x":332,"y":42,"w":9,"h":15},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":9,"h":15},
+	"sourceSize": {"w":15,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"flame-2":
+{
+	"frame": {"x":332,"y":59,"w":9,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":9,"h":14},
+	"sourceSize": {"w":15,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"pumpkin-1":
+{
+	"frame": {"x":216,"y":2,"w":72,"h":39},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":0,"w":72,"h":39},
+	"sourceSize": {"w":80,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"pumpkin-2":
+{
+	"frame": {"x":290,"y":2,"w":54,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":0,"w":54,"h":38},
+	"sourceSize": {"w":80,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"pumpkin-3":
+{
+	"frame": {"x":216,"y":141,"w":64,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":0,"w":64,"h":40},
+	"sourceSize": {"w":80,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"pumpkin-4":
+{
+	"frame": {"x":282,"y":83,"w":63,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":0,"w":63,"h":38},
+	"sourceSize": {"w":80,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"pumpkin-5":
+{
+	"frame": {"x":290,"y":42,"w":40,"h":39},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":39},
+	"sourceSize": {"w":40,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "event-pumpkinfest.png",
+	"format": "RGBA5555",
+	"size": {"w":347,"h":218},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c372963cb82ca6db8c1e9b79a2252b31:79c9d8e9ff07d9526ed6a371313b82c3:7761d5dce6561f770252391e47b9372b$"
+}
+}

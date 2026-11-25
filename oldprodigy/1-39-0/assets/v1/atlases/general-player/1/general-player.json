@@ -1,0 +1,174 @@
+{"frames": {
+
+"arm_1_f":
+{
+	"frame": {"x":184,"y":85,"w":12,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":20},
+	"sourceSize": {"w":12,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_1_m":
+{
+	"frame": {"x":79,"y":86,"w":18,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":26},
+	"sourceSize": {"w":18,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_f":
+{
+	"frame": {"x":177,"y":60,"w":16,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":22},
+	"sourceSize": {"w":16,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_m":
+{
+	"frame": {"x":195,"y":59,"w":24,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+	"sourceSize": {"w":24,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"hat":
+{
+	"frame": {"x":0,"y":0,"w":87,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":87,"h":84},
+	"sourceSize": {"w":87,"h":84},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"head":
+{
+	"frame": {"x":89,"y":0,"w":52,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":53},
+	"sourceSize": {"w":52,"h":53},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_0":
+{
+	"frame": {"x":0,"y":86,"w":27,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":27,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_1":
+{
+	"frame": {"x":179,"y":0,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_2":
+{
+	"frame": {"x":143,"y":34,"w":37,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":24},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_3":
+{
+	"frame": {"x":29,"y":86,"w":24,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":24,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_4":
+{
+	"frame": {"x":55,"y":86,"w":22,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_0":
+{
+	"frame": {"x":89,"y":55,"w":42,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_1":
+{
+	"frame": {"x":133,"y":60,"w":42,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":23},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_2":
+{
+	"frame": {"x":99,"y":83,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_3":
+{
+	"frame": {"x":160,"y":85,"w":22,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":22,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_4":
+{
+	"frame": {"x":132,"y":85,"w":26,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":26,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_f":
+{
+	"frame": {"x":182,"y":25,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":28,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_m":
+{
+	"frame": {"x":143,"y":0,"w":34,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":32},
+	"sourceSize": {"w":34,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "general-player.png",
+	"format": "RGBA5555",
+	"size": {"w":219,"h":114},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ed321f51e626c285bdd708f52e4189bf:8b09373df444be61c4a45937a305619c:85118f579542ae1879b646d816bf00ad$"
+}
+}

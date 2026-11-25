@@ -1,0 +1,111 @@
+{"frames": {
+
+"machav2-body1":
+{
+	"frame": {"x":150,"y":260,"w":46,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":50},
+	"sourceSize": {"w":46,"h":50},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-body2":
+{
+	"frame": {"x":198,"y":260,"w":46,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":50},
+	"sourceSize": {"w":46,"h":50},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head1":
+{
+	"frame": {"x":2,"y":186,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head2":
+{
+	"frame": {"x":76,"y":186,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head3":
+{
+	"frame": {"x":150,"y":186,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head4":
+{
+	"frame": {"x":180,"y":2,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head6":
+{
+	"frame": {"x":180,"y":76,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head7":
+{
+	"frame": {"x":2,"y":260,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-head8":
+{
+	"frame": {"x":76,"y":260,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"machav2-shadow":
+{
+	"frame": {"x":180,"y":150,"w":38,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":16},
+	"sourceSize": {"w":38,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"toy-merchant-cart":
+{
+	"frame": {"x":2,"y":2,"w":176,"h":182},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":182},
+	"sourceSize": {"w":176,"h":182},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-sprite-toy.png",
+	"format": "RGBA5555",
+	"size": {"w":254,"h":334},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:733f4776c1e2ba2f1dc8f67cadabe7b8:17744b924adaf4538f6a8d829ac22c0a:634b54836a77eb544a16b358cc1609e0$"
+}
+}

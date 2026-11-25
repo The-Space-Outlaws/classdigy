@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_f":
+{
+	"frame": {"x":38,"y":62,"w":12,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":20},
+	"sourceSize": {"w":12,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_f":
+{
+	"frame": {"x":37,"y":93,"w":16,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":22},
+	"sourceSize": {"w":16,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_0":
+{
+	"frame": {"x":2,"y":37,"w":27,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":27,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_1":
+{
+	"frame": {"x":2,"y":93,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_2":
+{
+	"frame": {"x":2,"y":67,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_3":
+{
+	"frame": {"x":30,"y":2,"w":24,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":24,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_4":
+{
+	"frame": {"x":31,"y":32,"w":22,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_f":
+{
+	"frame": {"x":2,"y":2,"w":26,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":33},
+	"sourceSize": {"w":26,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-female-29.png",
+	"format": "RGBA8888",
+	"size": {"w":56,"h":119},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5a2a7f802de48a0f0a55244a82ec013b:26a8bfc35579b99b9e08e10132583f63:66fb3df013b26d2754fbcd8a002d983f$"
+}
+}

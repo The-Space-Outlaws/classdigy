@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_m":
+{
+	"frame": {"x":114,"y":30,"w":18,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":30},
+	"sourceSize": {"w":18,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_m":
+{
+	"frame": {"x":90,"y":30,"w":22,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":28},
+	"sourceSize": {"w":22,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_0":
+{
+	"frame": {"x":2,"y":33,"w":42,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_1":
+{
+	"frame": {"x":46,"y":33,"w":42,"h":25},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":25},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_2":
+{
+	"frame": {"x":51,"y":2,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_3":
+{
+	"frame": {"x":110,"y":2,"w":23,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":23,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_m_4":
+{
+	"frame": {"x":84,"y":2,"w":24,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":0,"w":24,"h":26},
+	"sourceSize": {"w":42,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_m":
+{
+	"frame": {"x":2,"y":2,"w":47,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":29},
+	"sourceSize": {"w":47,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-male-24.png",
+	"format": "RGBA8888",
+	"size": {"w":135,"h":62},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4ffb0e1138df74b782135a994d313ecc:a2da015f2aa4d59d41daff56fd10e58e:169a6dd99e19f663d5af0da6f86c383e$"
+}
+}

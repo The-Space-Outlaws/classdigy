@@ -1,0 +1,84 @@
+{"frames": {
+
+"arm_1_f":
+{
+	"frame": {"x":99,"y":32,"w":16,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":28},
+	"sourceSize": {"w":16,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"arm_2_f":
+{
+	"frame": {"x":46,"y":2,"w":18,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":30},
+	"sourceSize": {"w":18,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_0":
+{
+	"frame": {"x":66,"y":2,"w":27,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":27,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_1":
+{
+	"frame": {"x":38,"y":35,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_2":
+{
+	"frame": {"x":2,"y":35,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_3":
+{
+	"frame": {"x":73,"y":32,"w":24,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":24,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"legs_f_4":
+{
+	"frame": {"x":95,"y":2,"w":22,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":28},
+	"sourceSize": {"w":38,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"outfit_f":
+{
+	"frame": {"x":2,"y":2,"w":42,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":31},
+	"sourceSize": {"w":42,"h":31},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "editor-outfit-female-24.png",
+	"format": "RGBA8888",
+	"size": {"w":119,"h":62},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:783fd1f2e1bb8a495f1ffcda55d10485:fa568b362fc1ff9fc753f2b7035d558d:212d9ea1a362128e0172ef6796c789dc$"
+}
+}

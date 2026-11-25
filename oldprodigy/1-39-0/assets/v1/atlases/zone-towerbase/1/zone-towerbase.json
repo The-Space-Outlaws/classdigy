@@ -1,0 +1,21 @@
+{"frames": {
+
+"bg":
+{
+	"frame": {"x":0,"y":0,"w":1280,"h":720},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":720},
+	"sourceSize": {"w":1280,"h":720},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "zone-towerbase.png",
+	"format": "RGBA5555",
+	"size": {"w":1280,"h":720},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:1500e51d88162597fe4947a42206f3f5:387b37756a268b3e1629ffcd238f1cd4:3b66b82aec409f098849c49809b41b59$"
+}
+}

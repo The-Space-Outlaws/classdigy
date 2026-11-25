@@ -1,0 +1,111 @@
+{"frames": {
+
+"125":
+{
+	"frame": {"x":2,"y":2,"w":233,"h":250},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":233,"h":250},
+	"sourceSize": {"w":250,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"125_1":
+{
+	"frame": {"x":237,"y":2,"w":333,"h":242},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":0,"w":333,"h":242},
+	"sourceSize": {"w":350,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"126":
+{
+	"frame": {"x":1164,"y":328,"w":175,"h":167},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":42,"w":175,"h":167},
+	"sourceSize": {"w":250,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"126_1":
+{
+	"frame": {"x":675,"y":242,"w":312,"h":232},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":29,"y":4,"w":312,"h":232},
+	"sourceSize": {"w":350,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"127":
+{
+	"frame": {"x":863,"y":2,"w":235,"h":221},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":28,"w":235,"h":221},
+	"sourceSize": {"w":250,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"127_1":
+{
+	"frame": {"x":328,"y":246,"w":345,"h":238},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":345,"h":238},
+	"sourceSize": {"w":350,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"128":
+{
+	"frame": {"x":989,"y":225,"w":173,"h":218},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":29,"y":30,"w":173,"h":218},
+	"sourceSize": {"w":250,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"128_1":
+{
+	"frame": {"x":572,"y":2,"w":289,"h":238},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":56,"y":4,"w":289,"h":238},
+	"sourceSize": {"w":350,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"129":
+{
+	"frame": {"x":1100,"y":2,"w":233,"h":183},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":66,"w":233,"h":183},
+	"sourceSize": {"w":250,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"129_1":
+{
+	"frame": {"x":2,"y":254,"w":324,"h":239},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":1,"w":324,"h":239},
+	"sourceSize": {"w":350,"h":250},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"logo":
+{
+	"frame": {"x":1164,"y":187,"w":200,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":139},
+	"sourceSize": {"w":200,"h":139},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "popup-toystore.png",
+	"format": "RGBA5555",
+	"size": {"w":1366,"h":497},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:717e2c872b8d56ee78e5e76aa6ed981e:74043131b61aeaef295cba4240ab2233:464affbb447a9e339d6c06a1f5e9c9be$"
+}
+}

@@ -1,0 +1,21 @@
+{"frames": {
+
+"face_0":
+{
+	"frame": {"x":2,"y":2,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-face-julia-ghoulia.png",
+	"format": "RGBA5555",
+	"size": {"w":204,"h":204},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2e0ea2a377658bae871a4159783a3128:4f6cab5fd60ea5b084f77d0dbfaf5b42:07d0d94f4f9c2a8a528c33fac30e007f$"
+}
+}

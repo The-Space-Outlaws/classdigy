@@ -1,0 +1,84 @@
+{"frames": {
+
+"npc_0":
+{
+	"frame": {"x":2,"y":2,"w":93,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":89},
+	"sourceSize": {"w":93,"h":89},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_1":
+{
+	"frame": {"x":2,"y":2,"w":93,"h":89},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":89},
+	"sourceSize": {"w":93,"h":89},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_2":
+{
+	"frame": {"x":97,"y":2,"w":92,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":88},
+	"sourceSize": {"w":92,"h":88},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_3":
+{
+	"frame": {"x":97,"y":2,"w":92,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":88},
+	"sourceSize": {"w":92,"h":88},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_4":
+{
+	"frame": {"x":97,"y":92,"w":91,"h":87},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":87},
+	"sourceSize": {"w":91,"h":87},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_5":
+{
+	"frame": {"x":97,"y":92,"w":91,"h":87},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":87},
+	"sourceSize": {"w":91,"h":87},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_6":
+{
+	"frame": {"x":2,"y":93,"w":91,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":86},
+	"sourceSize": {"w":91,"h":86},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"npc_7":
+{
+	"frame": {"x":2,"y":93,"w":91,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":86},
+	"sourceSize": {"w":91,"h":86},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-sprite-slime-guard.png",
+	"format": "RGBA5555",
+	"size": {"w":191,"h":181},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:009d6b4beafd7842dbf586e71f877aaf:bc4c6d2c5a673e2b8f5a430de22731d0:2190f62618b9ef095d7299aa3535c9c5$"
+}
+}

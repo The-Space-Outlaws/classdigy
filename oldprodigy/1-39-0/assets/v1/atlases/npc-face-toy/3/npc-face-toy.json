@@ -1,0 +1,21 @@
+{"frames": {
+
+"face_0":
+{
+	"frame": {"x":2,"y":2,"w":126,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":126,"h":200},
+	"sourceSize": {"w":126,"h":200},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-face-toy.png",
+	"format": "RGBA5555",
+	"size": {"w":130,"h":204},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4654eafbbb1c0ee3c4b2dcbef4185687:1da42cd3ba45661a4f40566cdf0901a9:5ea5db1b3f4582f2f3249fd005266cbb$"
+}
+}

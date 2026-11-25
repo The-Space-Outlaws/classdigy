@@ -1,0 +1,21 @@
+{"frames": {
+
+"face_0":
+{
+	"frame": {"x":2,"y":2,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "npc-face-mama-star.png",
+	"format": "RGBA5555",
+	"size": {"w":204,"h":204},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:605214f4d68f2abe6843d164416aa664:ebadf87e644c34995f8eef2bf1449082:212d7263e651470910795ca5bea0c74b$"
+}
+}
