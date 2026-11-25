@@ -854,7 +854,20 @@ FirebaseCore.worldChosen = function (game, e, t, i) {
 			game.prodigy.open.charSelect();
 			return;
 		}
-		FirebaseCore.enableOnlineMultiplayer(game);
+		if (e) {
+			// Play offline: do not enable multiplayer or connect to the relay.
+			try {
+				var net = game && game.prodigy && game.prodigy.network;
+				if (net) {
+					net.loggedIn = !1;
+					if (net.socket && typeof net.socket.disconnect === "function") net.socket.disconnect();
+				}
+			} catch (e3) {
+				console.log("offline cleanup failed: " + e3);
+			}
+		} else {
+			FirebaseCore.enableOnlineMultiplayer(game);
+		}
 		var zone = game.prodigy.player && game.prodigy.player.data && game.prodigy.player.data.zone;
 		if (zone && String(zone).indexOf("-") > 0) {
 			try {
@@ -876,7 +889,7 @@ FirebaseCore.worldChosen = function (game, e, t, i) {
 FirebaseCore.relayDownFallback = function (game) {
 	try {
 		var openOffline = function () {
-			FirebaseCore.worldChosen(game, null, !0, !1);
+			FirebaseCore.worldChosen(game, !0, !1, !1);
 		};
 		game.prodigy.open.message(
 			"The multiplayer worlds can't be reached right now. The free server may be waking up — try again in a minute.\n\nYou can keep playing offline; your progress syncs next time you sign in.",
