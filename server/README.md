@@ -65,15 +65,30 @@ Keep the existing rules for `players/`, `saves/`, `usernames/` unchanged.
 
 | Var | Required | Default | Meaning |
 |---|---|---|---|
+| `HOST` | no | `0.0.0.0` | IP interface to bind to (e.g., `0.0.0.0` for all network interfaces) |
 | `PORT` | no | `3100` | Render sets this automatically |
-| `FIREBASE_SERVICE_ACCOUNT` | **yes** (prod) | — | service-account JSON; without it the relay exits (unless dev mode below) |
+| `FIREBASE_SERVICE_ACCOUNT` | **yes** (prod) | — | service-account JSON; without it the relay looks for a `firebase.js` file in the same folder |
 | `RELAY_ALLOW_UNVERIFIED` | no | unset | `1` = skip token verification. **Local dev only**, never on the internet |
 | `WORLD_COUNT` | no | `20` | ids served by `/v1/worlds` (must be ≤ the world NAMES the client knows) |
 | `WORLD_CAPACITY` | no | `100` | players per world; only affects the "full" percentage shown in the picker |
 | `MATCH_WINDOW` | no | `500` | arena matchmaking score delta |
 | `MATCH_QUEUE_TTL` | no | `90000` | queue entry lifetime (ms) |
 
-## Local development
+## Self-Hosting with `firebase.js`
+
+You can place your downloaded Firebase Service Account JSON directly in the `server/` directory:
+
+1. Download your service account key from the Firebase Console (Project Settings → Service Accounts → Generate new private key).
+2. Save or rename that file as `firebase.js` (or `firebase.json`) inside the `server/` folder alongside `index.js`.
+3. Start the server:
+   ```bash
+   cd server
+   npm install
+   npm start
+   ```
+4. The server automatically detects `firebase.js`, initializes Firebase Admin SDK, binds to all interfaces (`0.0.0.0:3100`), and outputs the machine's local and LAN IP addresses so other devices on your network can connect.
+
+## Local development (unverified mode without Firebase keys)
 
 ```
 cd server

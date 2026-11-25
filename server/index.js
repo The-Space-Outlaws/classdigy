@@ -41,6 +41,23 @@ var MAX_MSG_BYTES = 16 * 1024;
 var ALLOW_UNVERIFIED = process.env.RELAY_ALLOW_UNVERIFIED === "1";
 var SA_JSON = process.env.FIREBASE_SERVICE_ACCOUNT;
 
+// Auto-detect a service-account file dropped in the server directory.
+if (!SA_JSON) {
+	try {
+		var fs = require("fs");
+		var path = require("path");
+		var candidates = ["firebase.js", "firebase.json", "service-account.json", "serviceAccount.json"];
+		for (var i = 0; i < candidates.length; i++) {
+			var p = path.join(__dirname, candidates[i]);
+			if (fs.existsSync(p)) {
+				SA_JSON = fs.readFileSync(p, "utf8");
+				console.log("[relay] loaded service account from " + candidates[i]);
+				break;
+			}
+		}
+	} catch (e) {}
+}
+
 // ---------- firebase-admin (optional for local dev) -------------------------
 var adminApp = null;   // firebase-admin/app instance
 var adminAuth = null;  // firebase-admin/auth
@@ -93,10 +110,11 @@ app.get("/status", function (req, res) {
 });
 
 app.get("/v1/worlds", function (req, res) {
+	var version = String(req.query.version || "unknown");
 	var worlds = [];
 	for (var id = 1; id <= WORLD_COUNT; id++) {
-		var n = worldCount(id);
-		worlds.push({ id: id, full: Math.max(0, Math.min(100, Math.round((n * 100) / WORLD_CAPACITY))) });
+		var n = worldCount(id, version);
+		worlds.push({ id: id, full: Math.max(0, Math.min(100, Math.round((n * 100) / WORLD_CAPACITY))), version: version });
 	}
 	res.json(worlds);
 });
@@ -130,6 +148,7 @@ function tryMatch(entry) {
 	var best = null, bestDelta = Infinity;
 	queue.forEach(function (other, uid) {
 		if (uid === entry.uid || other.socketId === entry.socketId) return;
+		if (other.version !== entry.version) return;
 		var delta = Math.abs((other.score || 0) - (entry.score || 0));
 		if (delta <= MATCH_WINDOW && delta < bestDelta) { best = other; bestDelta = delta; }
 	});
@@ -155,8 +174,18 @@ app.post("/matchmaking-api/begin", function (req, res) {
 	handleTokenAndBody(req, res, function (body, userID) {
 		queueSweep();
 		var playerData = normalizePlayerData(body.playerData);
-		var socketId = socketIdOf(userID);
+		var liveSocket = null;
+		var set = uidSockets.get(userID);
+		if (set) {
+			// set is now Map<version, Set<socket>>
+			for (var v of set.keys()) { var s = set.get(v); if (s && s.size) { liveSocket = s.values().next().value; break; } }
+		}
+		var version = (liveSocket && liveSocket.version) || String(body.version || "unknown");
+		var socketId = socketIdOf(userID, version);
 		if (!socketId) return res.status(409).json({ error: "not connected to the multiplayer relay; rejoin a world first" });
+		var liveSocket = null;
+		var set = uidSockets.get(userID);
+		if (set) { liveSocket = set.values().next().value; }
 		var entry = {
 			uid: userID,
 			userID: userID,
@@ -164,6 +193,7 @@ app.post("/matchmaking-api/begin", function (req, res) {
 			score: Number(body.score) || 0,
 			playerData: playerData,
 			socketId: socketId,
+			version: (liveSocket && liveSocket.version) || String(body.version || "unknown"),
 			addedAt: Date.now()
 		};
 		var match = tryMatch(entry);
@@ -179,8 +209,8 @@ app.post("/matchmaking-api/begin", function (req, res) {
 				playerB: { id: p2.userID, data: p2.playerData }
 			}
 		};
-		emitToUser(p1.userID, msg);
-		emitToUser(p2.userID, msg);
+		emitToUser(p1.userID, msg, p1.version);
+		emitToUser(p2.userID, msg, p2.version);
 		res.json({ ok: true, matched: true });
 	});
 });
@@ -316,61 +346,94 @@ var socketUid = new Map();
 var worldSockets = new Map(); // worldId -> Set<socket>
 var socketZone = new Map();   // socket -> zoneRoom
 
-function addUidSocket(uid, socket) {
-	if (!uidSockets.has(uid)) uidSockets.set(uid, new Set());
-	uidSockets.get(uid).add(socket);
+function addUidSocket(uid, socket, version) {
+	version = version || "unknown";
+	if (!uidSockets.has(uid)) uidSockets.set(uid, new Map());
+	var vmap = uidSockets.get(uid);
+	if (!vmap.has(version)) vmap.set(version, new Set());
+	vmap.get(version).add(socket);
 	socketUid.set(socket.id, uid);
 }
 
-function removeUidSocket(uid, socket) {
-	var set = uidSockets.get(uid);
-	if (set) {
-		set.delete(socket);
-		if (set.size === 0) uidSockets.delete(uid);
+function removeUidSocket(uid, socket, version) {
+	version = version || (socket && socket.version) || "unknown";
+	var vmap = uidSockets.get(uid);
+	if (vmap) {
+		var set = vmap.get(version);
+		if (set) {
+			set.delete(socket);
+			if (set.size === 0) vmap.delete(version);
+		}
+		if (vmap.size === 0) uidSockets.delete(uid);
 	}
 	socketUid.delete(socket.id);
 }
 
-function addWorldSocket(worldId, socket) {
-	if (!worldSockets.has(worldId)) worldSockets.set(worldId, new Set());
-	worldSockets.get(worldId).add(socket);
+function addWorldSocket(worldId, version, socket) {
+	var key = version + ":" + worldId;
+	if (!worldSockets.has(key)) worldSockets.set(key, new Set());
+	worldSockets.get(key).add(socket);
 }
 
-function removeWorldSocket(worldId, socket) {
-	var set = worldSockets.get(worldId);
+function removeWorldSocket(worldId, version, socket) {
+	var key = version + ":" + worldId;
+	var set = worldSockets.get(key);
 	if (set) {
 		set.delete(socket);
-		if (set.size === 0) worldSockets.delete(worldId);
+		if (set.size === 0) worldSockets.delete(key);
 	}
 }
 
-function worldCount(worldId) {
-	var set = worldSockets.get(worldId);
+function worldCount(worldId, version) {
+	var key = (version || "unknown") + ":" + worldId;
+	var set = worldSockets.get(key);
 	return set ? set.size : 0;
 }
 
 function playerListByIdCount() {
 	var n = 0;
-	uidSockets.forEach(function (set) { n += set.size; });
+	uidSockets.forEach(function (vmap) { vmap.forEach(function (set) { n += set.size; }); });
 	return n;
 }
 
-function socketIdOf(uid) {
-	var set = uidSockets.get(uid);
-	if (!set) return null;
-	var first = set.values().next();
-	return first.done ? null : first.value.id;
+function socketIdOf(uid, version) {
+	var vmap = uidSockets.get(uid);
+	if (!vmap) return null;
+	if (version) {
+		var set = vmap.get(version);
+		if (set && set.size) {
+			var first = set.values().next();
+			return first.done ? null : first.value.id;
+		}
+	}
+	for (var v of vmap.keys()) {
+		var set = vmap.get(v);
+		if (set && set.size) {
+			var first = set.values().next();
+			if (!first.done) return first.value.id;
+		}
+	}
+	return null;
 }
 
-function emitToUser(uid, msg) {
-	var set = uidSockets.get(uid);
-	if (!set) return false;
-	set.forEach(function (socket) { socket.emit("message", msg); });
-	return true;
+function emitToUser(uid, msg, version) {
+	var vmap = uidSockets.get(uid);
+	if (!vmap) return false;
+	var sent = false;
+	var deliver = function (set) {
+		set.forEach(function (socket) { socket.emit("message", msg); sent = true; });
+	};
+	if (version && vmap.has(version)) {
+		deliver(vmap.get(version));
+		return sent;
+	}
+	if (version) return false;
+	vmap.forEach(function (set) { deliver(set); });
+	return sent;
 }
 
-function zoneRoom(worldId, zone) {
-	return "world:" + worldId + ":zone:" + zone;
+function zoneRoom(worldId, zone, version) {
+	return "world:" + (version || "unknown") + ":" + worldId + ":zone:" + zone;
 }
 
 function bytesOf(value) {
@@ -382,6 +445,7 @@ io.on("connection", function (socket) {
 	var userId = String(q.userId || "");
 	var worldId = Number(q.worldId) || 1;
 	var userToken = String(q.userToken || "");
+	var version = String(q.version || "unknown");
 	if (!isFinite(worldId) || worldId < 1 || worldId > WORLD_COUNT) worldId = 1;
 
 	verifyToken(userToken, function (err, decoded) {
@@ -391,24 +455,31 @@ io.on("connection", function (socket) {
 			socket.disconnect(true);
 			return;
 		}
-		bindSocket(socket, userId, worldId);
+		bindSocket(socket, userId, worldId, version);
 	});
 });
 
-function bindSocket(socket, uid, worldId) {
-	// one live session per account: a fresh login supersedes the old socket
-	var existing = uidSockets.get(uid);
-	if (existing) {
-		existing.forEach(function (old) {
-			try { old.emit("error", { code: 409, message: "signed in elsewhere" }); old.disconnect(true); } catch (e) {}
-		});
-		uidSockets.delete(uid);
+function bindSocket(socket, uid, worldId, version) {
+	version = version || "unknown";
+	socket.version = version;
+	// one live session per account+version: a fresh login in the same version
+	// supersedes the old socket, but other versions stay connected
+	var vmap = uidSockets.get(uid);
+	if (vmap) {
+		var existing = vmap.get(version);
+		if (existing) {
+			existing.forEach(function (old) {
+				try { old.emit("error", { code: 409, message: "signed in elsewhere" }); old.disconnect(true); } catch (e) {}
+			});
+			vmap.delete(version);
+			if (vmap.size === 0) uidSockets.delete(uid);
+		}
 	}
 
-	addUidSocket(uid, socket);
-	addWorldSocket(worldId, socket);
-	socket.join("world:" + worldId);
-	console.log("[relay] +uid=" + uid + " world=" + worldId + " (world pop: " + worldCount(worldId) + ")");
+	addUidSocket(uid, socket, version);
+	addWorldSocket(worldId, version, socket);
+	socket.join("world:" + version + ":" + worldId);
+	console.log("[relay] +uid=" + uid + " world=" + worldId + " version=" + version + " (world pop: " + worldCount(worldId, version) + ")");
 
 	var msgWindow = { count: 0, resetAt: Date.now() + 1000 };
 
@@ -417,7 +488,7 @@ function bindSocket(socket, uid, worldId) {
 		zoneName = zoneName.slice(0, 100).replace(/[\x00-\x1f\x7f]/g, "");
 		if (!zoneName) return;
 		var oldRoom = socketZone.get(socket);
-		var newRoom = zoneRoom(worldId, zoneName);
+		var newRoom = zoneRoom(worldId, zoneName, version);
 		if (oldRoom === newRoom) return;
 		if (oldRoom) {
 			socket.leave(oldRoom);
@@ -450,7 +521,7 @@ function bindSocket(socket, uid, worldId) {
 
 		var target = msg.target != null ? String(msg.target) : null;
 		if (target) {
-			if (emitToUser(target, msg)) return true;
+			if (emitToUser(target, msg, version)) return true;
 			// offline recipient: persist to their mailbox for delivery on next login
 			var offlineMsg = JSON.parse(JSON.stringify(msg));
 			offlineMsg.time = 7 * 24 * 3600 * 1000; // mail must outlive the 60s live challenge window
@@ -466,9 +537,9 @@ function bindSocket(socket, uid, worldId) {
 		var oldRoom = socketZone.get(socket);
 		if (oldRoom) socket.to(oldRoom).emit("playerLeft", uid);
 		socketZone.delete(socket);
-		removeUidSocket(uid, socket);
-		removeWorldSocket(worldId, socket);
-		console.log("[relay] -uid=" + uid + " world=" + worldId + " (world pop: " + worldCount(worldId) + ")");
+		removeUidSocket(uid, socket, version);
+		removeWorldSocket(worldId, version, socket);
+		console.log("[relay] -uid=" + uid + " world=" + worldId + " version=" + version + " (world pop: " + worldCount(worldId, version) + ")");
 	});
 }
 
