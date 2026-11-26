@@ -171,7 +171,7 @@ class ModHandler {
 	
 	initClassicFaceMod() {
 		var assets = this.game.prodigy.assets._assets;
-		assets.heads.base = "https://prodigy.entraptadoeztech.nya.je/oldprodigy/1-39-0/assets/images/";
+		assets.heads.base = "https://cdn.jsdelivr.net/gh/The-Space-Outlaws/classdigy@refs/heads/main/oldprodigy/1-39-0/assets/images/";
 		
 		Prodigy.Container.PlayerContainer.getAssets = function (e, t, i, a) {
 			var s = new Array;
